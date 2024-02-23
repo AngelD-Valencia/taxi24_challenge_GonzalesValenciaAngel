@@ -4,7 +4,6 @@ import userRoutes from '../routes/usuario.routes';
 import conductorRoutes from '../routes/conductor.routes';
 import carroRoutes from '../routes/carro.routes';
 import viajeRoutes from '../routes/viaje.routes';
-import estadoViajeRoutes from '../routes/estado_viaje.routes';
 import facturaRoutes from '../routes/factura.routes';
 import Database from '../database/conection';
 
@@ -51,9 +50,6 @@ class Server {
 
         //lectura del body
         this.app.use(express.json());
-
-        //carpeta  publica
-        this.app.use( express.static('public') );
     }
 
     routes() {
@@ -61,7 +57,6 @@ class Server {
         this.app.use(this.apiPaths.conductores, conductorRoutes)
         this.app.use(this.apiPaths.carros, carroRoutes)
         this.app.use(this.apiPaths.viaje, viajeRoutes)
-        this.app.use(this.apiPaths.estadoViaje, estadoViajeRoutes)
         this.app.use(this.apiPaths.factura, facturaRoutes)
     }
 

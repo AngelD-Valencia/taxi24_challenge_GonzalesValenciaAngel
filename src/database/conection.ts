@@ -19,7 +19,6 @@ const db = new Sequelize(
     import { Conductor } from "../models/conductor";
     import { Carro } from "../models/carro";
     import { Viaje } from "../models/viaje";
-    import { EstadoViaje } from "../models/estado_viaje";
     import { Factura } from "../models/factura";
     dotenv.config();
     
@@ -48,7 +47,7 @@ const db = new Sequelize(
           host: this.POSTGRES_HOST,
           port: this.POSTGRES_PORT,
           dialect: "postgres",
-          models:[Usuario, Conductor, Carro, Viaje, EstadoViaje, Factura ]
+          models:[Usuario, Conductor, Carro, Viaje, Factura ]
         });
     
         await this.sequelize

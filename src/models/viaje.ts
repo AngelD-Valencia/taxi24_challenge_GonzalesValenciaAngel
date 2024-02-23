@@ -1,6 +1,5 @@
 import { DataTypes } from "sequelize";
 import { Model, Table, Column, DataType, BelongsTo, ForeignKey, HasOne } from "sequelize-typescript";
-import EstadoViaje from "./estado_viaje";
 import Factura from "./factura";
 import Conductor from "./conductor";
 import Usuario from "./usuario";

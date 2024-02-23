@@ -72,18 +72,6 @@ __decorate([
     __metadata("design:type", String)
 ], Usuario.prototype, "tipo_persona", void 0);
 __decorate([
-    (0, sequelize_typescript_1.Column)({
-        type: sequelize_typescript_1.DataType.FLOAT,
-    }),
-    __metadata("design:type", Number)
-], Usuario.prototype, "latitude", void 0);
-__decorate([
-    (0, sequelize_typescript_1.Column)({
-        type: sequelize_typescript_1.DataType.FLOAT,
-    }),
-    __metadata("design:type", Number)
-], Usuario.prototype, "longitude", void 0);
-__decorate([
     (0, sequelize_typescript_1.HasMany)(() => viaje_1.default),
     __metadata("design:type", Array)
 ], Usuario.prototype, "viaje", void 0);

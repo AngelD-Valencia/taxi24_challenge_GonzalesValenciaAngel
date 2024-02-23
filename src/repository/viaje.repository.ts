@@ -101,7 +101,7 @@ export class ViajeRepo implements IViajeRepo {
       try {
        return await Viaje.findAll({
         where: {
-          estado_viaje: "ACTIVOS",
+          estado_viaje: "ACTIVO",
         },
        });
       } catch (error) {

@@ -115,7 +115,7 @@ class ViajeRepo {
             try {
                 return yield viaje_1.default.findAll({
                     where: {
-                        estado_viaje: "ACTIVOS",
+                        estado_viaje: "ACTIVO",
                     },
                 });
             }

@@ -48,7 +48,7 @@ export class ConductorRepo implements IConductorRepo {
       new_conductor.apellidos = conductor.apellidos;
       new_conductor.doc_identidad = conductor.doc_identidad;
       new_conductor.email = conductor.email;
-      new_conductor.phone = conductor.email;
+      new_conductor.phone = conductor.phone;
       new_conductor.longitude = conductor.longitude;
       new_conductor.latitude = conductor.latitude;
       new_conductor.disponible = conductor.disponible;
@@ -82,6 +82,7 @@ export class ConductorRepo implements IConductorRepo {
         where: {
           id: conductorId,
         },
+        include: [Viaje]
       });
       if (!new_conductor) {
         throw new Error("Conductor not found!");

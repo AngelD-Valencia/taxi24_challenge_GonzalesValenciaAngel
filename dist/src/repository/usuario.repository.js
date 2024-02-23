@@ -24,9 +24,7 @@ class UsuarioRepo {
                     apellidos: usuario.apellidos,
                     doc_identidad: usuario.doc_identidad,
                     email: usuario.email,
-                    phone: usuario.email,
-                    longitude: usuario.longitude,
-                    latitude: usuario.latitude,
+                    phone: usuario.phone,
                 });
                 return p;
             }
@@ -50,9 +48,7 @@ class UsuarioRepo {
                 new_usuario.apellidos = usuario.apellidos;
                 new_usuario.doc_identidad = usuario.doc_identidad;
                 new_usuario.email = usuario.email;
-                new_usuario.phone = usuario.email;
-                new_usuario.longitude = usuario.longitude;
-                new_usuario.latitude = usuario.latitude;
+                new_usuario.phone = usuario.phone;
                 yield new_usuario.save();
             }
             catch (error) {
@@ -99,7 +95,7 @@ class UsuarioRepo {
     findAll() {
         return __awaiter(this, void 0, void 0, function* () {
             try {
-                return yield usuario_1.default.findAll({ include: [viaje_1.default] });
+                return yield usuario_1.default.findAll({ include: [viaje_1.default], order: ['id'] });
             }
             catch (error) {
                 throw new Error("Failed to listar usuarios!");

@@ -10,8 +10,6 @@ class UsuarioController {
         new_usuario.apellidos = req.body.apellidos;
         new_usuario.doc_identidad = req.body.doc_identidad;
         new_usuario.email = req.body.email;
-        new_usuario.longitude = req.body.longitude;
-        new_usuario.latitude = req.body.latitude;
         new_usuario.phone = req.body.phone;
   
         let persona = await new UsuarioRepo().save(new_usuario);
@@ -93,8 +91,6 @@ class UsuarioController {
         new_usuario.doc_identidad = req.body.doc_identidad;
         new_usuario.email = req.body.email;
         new_usuario.phone = req.body.phone;
-        new_usuario.longitude = req.body.longitude;
-        new_usuario.latitude = req.body.latitude;
   
         await new UsuarioRepo().update(new_usuario);
   

@@ -23,8 +23,6 @@ class UsuarioController {
                 new_usuario.apellidos = req.body.apellidos;
                 new_usuario.doc_identidad = req.body.doc_identidad;
                 new_usuario.email = req.body.email;
-                new_usuario.longitude = req.body.longitude;
-                new_usuario.latitude = req.body.latitude;
                 new_usuario.phone = req.body.phone;
                 let persona = yield new usuario_repository_1.UsuarioRepo().save(new_usuario);
                 res.status(201).json({
@@ -108,8 +106,6 @@ class UsuarioController {
                 new_usuario.doc_identidad = req.body.doc_identidad;
                 new_usuario.email = req.body.email;
                 new_usuario.phone = req.body.phone;
-                new_usuario.longitude = req.body.longitude;
-                new_usuario.latitude = req.body.latitude;
                 yield new usuario_repository_1.UsuarioRepo().update(new_usuario);
                 res.status(200).json({
                     status: "Ok!",

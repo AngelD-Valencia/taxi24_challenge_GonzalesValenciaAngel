@@ -53,7 +53,6 @@ const usuario_1 = require("../models/usuario");
 const conductor_1 = require("../models/conductor");
 const carro_1 = require("../models/carro");
 const viaje_1 = require("../models/viaje");
-const estado_viaje_1 = require("../models/estado_viaje");
 const factura_1 = require("../models/factura");
 dotenv.config();
 class Database {
@@ -75,7 +74,7 @@ class Database {
                 host: this.POSTGRES_HOST,
                 port: this.POSTGRES_PORT,
                 dialect: "postgres",
-                models: [usuario_1.Usuario, conductor_1.Conductor, carro_1.Carro, viaje_1.Viaje, estado_viaje_1.EstadoViaje, factura_1.Factura]
+                models: [usuario_1.Usuario, conductor_1.Conductor, carro_1.Carro, viaje_1.Viaje, factura_1.Factura]
             });
             yield this.sequelize
                 .authenticate()

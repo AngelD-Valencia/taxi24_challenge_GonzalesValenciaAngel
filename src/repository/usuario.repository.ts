@@ -20,9 +20,7 @@ export class UsuarioRepo implements IUsuarioRepo {
             apellidos: usuario.apellidos,
             doc_identidad: usuario.doc_identidad,
             email: usuario.email,
-            phone: usuario.email,
-            longitude: usuario.longitude,
-            latitude: usuario.latitude,        
+            phone: usuario.phone,   
           });
         return p;
       } catch (error) {
@@ -43,9 +41,7 @@ export class UsuarioRepo implements IUsuarioRepo {
         new_usuario.apellidos= usuario.apellidos;
         new_usuario.doc_identidad= usuario.doc_identidad;
         new_usuario.email= usuario.email;
-        new_usuario.phone= usuario.email;
-        new_usuario.longitude = usuario.longitude;
-        new_usuario.latitude = usuario.latitude;
+        new_usuario.phone= usuario.phone;
   
         await new_usuario.save();
       } catch (error) {
@@ -86,7 +82,7 @@ export class UsuarioRepo implements IUsuarioRepo {
     }
     async findAll(): Promise<Usuario[]> {
       try {
-       return await Usuario.findAll({include:[Viaje]});
+       return await Usuario.findAll({include:[Viaje], order: ['id']});
       } catch (error) {
         throw new Error("Failed to listar usuarios!");
       }

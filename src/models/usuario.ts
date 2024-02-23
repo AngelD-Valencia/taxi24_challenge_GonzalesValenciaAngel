@@ -1,6 +1,5 @@
 import { DataTypes } from "sequelize";
 import { Model, Table, Column, DataType, HasMany } from "sequelize-typescript";
-import Factura from "./factura";
 import Viaje from "./viaje";
 
 
@@ -48,16 +47,6 @@ export class Usuario extends Model {
         defaultValue: 'pasajero'
     })
     tipo_persona: string;
-
-    @Column({ 
-        type: DataType.FLOAT,
-    })
-    latitude: number;
-
-    @Column({ 
-        type: DataType.FLOAT,
-    })
-    longitude: number;
 
     @HasMany(()=> Viaje)
     viaje: Viaje[]

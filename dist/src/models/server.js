@@ -9,7 +9,6 @@ const usuario_routes_1 = __importDefault(require("../routes/usuario.routes"));
 const conductor_routes_1 = __importDefault(require("../routes/conductor.routes"));
 const carro_routes_1 = __importDefault(require("../routes/carro.routes"));
 const viaje_routes_1 = __importDefault(require("../routes/viaje.routes"));
-const estado_viaje_routes_1 = __importDefault(require("../routes/estado_viaje.routes"));
 const factura_routes_1 = __importDefault(require("../routes/factura.routes"));
 const conection_1 = __importDefault(require("../database/conection"));
 class Server {
@@ -46,15 +45,12 @@ class Server {
         this.app.use((0, cors_1.default)());
         //lectura del body
         this.app.use(express_1.default.json());
-        //carpeta  publica
-        this.app.use(express_1.default.static('public'));
     }
     routes() {
         this.app.use(this.apiPaths.usuarios, usuario_routes_1.default);
         this.app.use(this.apiPaths.conductores, conductor_routes_1.default);
         this.app.use(this.apiPaths.carros, carro_routes_1.default);
         this.app.use(this.apiPaths.viaje, viaje_routes_1.default);
-        this.app.use(this.apiPaths.estadoViaje, estado_viaje_routes_1.default);
         this.app.use(this.apiPaths.factura, factura_routes_1.default);
     }
     listen() {
