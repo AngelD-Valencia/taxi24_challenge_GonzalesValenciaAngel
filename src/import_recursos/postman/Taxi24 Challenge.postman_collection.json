@@ -1,0 +1,723 @@
+{
+	"info": {
+		"_postman_id": "0f59edae-776c-4f71-809f-3eda58b55993",
+		"name": "Taxi24 Challenge",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29098349",
+		"_collection_link": "https://speeding-comet-740611.postman.co/workspace/Team-Workspace~ba8f4598-29b0-443d-833a-a45e7d362f42/collection/29098349-0f59edae-776c-4f71-809f-3eda58b55993?action=share&source=collection_link&creator=29098349"
+	},
+	"item": [
+		{
+			"name": "carro",
+			"item": [
+				{
+					"name": "listar carro",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/carros",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"carros"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "crear carro",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"placa\": \"ARC-493\",\r\n    \"seguro\": \"98474984541\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/carros",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"carros"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update carro",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"placa\": \"ARC-685\",\r\n    \"seguro\": \"9857465411\",\r\n    \"conductor_id\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/carros/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"carros",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "listar carro Copy",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/carros",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"carros"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "viaje",
+			"item": [
+				{
+					"name": "FINZALIZAR VIAJE",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/viaje/finalizar/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"viaje",
+								"finalizar",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "listar viaje Copy",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/viaje",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"viaje"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "viajes activos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/viaje/activos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"viaje",
+								"activos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "listar viaje Copy",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"lugar_inicial\": \"avenida Tacna\",\r\n    \"lugar_final\":\"avenida venezuela\",\r\n    \"precio\":\"8\",\r\n    \"distancia\":\"60 km\",\r\n    \"fecha_inicial\": \"11/17/2017 09:40:10\",\r\n    \"hora_inicial\":\"20:00:00\",\r\n    \"fecha_final\": \"11/17/2017  10:10:10\",\r\n    \"hora_final\":\"20:30:00\",\r\n    \"conductor_id\":2,\r\n    \"estado_viaje\": \"PENDIENTE\",    \r\n    \"usuario_id\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/viaje",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"viaje"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE VIAJE",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"lugar_inicial\": \"avenida 2\",\r\n    \"lugar_final\":\"avenida 10\",\r\n    \"precio\":\"8\",\r\n    \"distancia\":\"60 km\",\r\n    \"fecha_inicial\": \"11/17/2017 09:40:10\",\r\n    \"hora_inicial\":\"20:00:00\",\r\n    \"fecha_final\": \"11/17/2017  10:10:10\",\r\n    \"hora_final\":\"20:30:00\",\r\n    \"conductor_id\":1,\r\n    \"estado_viaje\": \"ACTIVO\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/viaje/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"viaje",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "solicitar conductor Copy",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/viaje/conductores?latitude=19.43050000&longitude=-99.13370000",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"viaje",
+								"conductores"
+							],
+							"query": [
+								{
+									"key": "latitude",
+									"value": "19.43050000"
+								},
+								{
+									"key": "longitude",
+									"value": "-99.13370000"
+								},
+								{
+									"key": null,
+									"value": "19.4194",
+									"disabled": true
+								},
+								{
+									"key": null,
+									"value": "-99.1458",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "estado viaje",
+			"item": [
+				{
+					"name": "New Request",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/estadoViaje",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"estadoViaje"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request Copy",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"descripcion\":\"FINALIZADO\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/estadoViaje",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"estadoViaje"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "usuario",
+			"item": [
+				{
+					"name": "crear user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Maria\",\r\n    \"apellidos\": \"Acosta\",\r\n    \"doc_identidad\": \"74512836\",\r\n    \"email\": \"maria@gmail.com\",\r\n    \"phone\": \"987654321\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/usuarios",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"usuarios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Pedro\",\r\n    \"apellidos\": \"Perez\",\r\n    \"doc_identidad\": \"87459623\",\r\n    \"email\": \"pedro@gmail.com\",\r\n    \"phone\": \"987456123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/usuarios/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"usuarios",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "listar user",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/usuarios",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"usuarios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "buscar user",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/usuarios/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"usuarios",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "factura",
+			"item": [
+				{
+					"name": "listar factura",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/factura",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"factura"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete factura",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/factura/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"factura",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "crear factura",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"empresa\":\"ABC\",\r\n    \"viaje_id\":1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/factura",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"factura"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "conductor",
+			"item": [
+				{
+					"name": "LISTAR conductores",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/conductores",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"conductores"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request Copy",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/conductores",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"conductores"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "conductores disponibles",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/conductores/disponibles",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"conductores",
+								"disponibles"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "BUSCAR conductor por id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/conductores/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"conductores",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "solicitar conductor",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/viaje/conductores?latitude=19.43050000&longitude=-99.12370000",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"viaje",
+								"conductores"
+							],
+							"query": [
+								{
+									"key": "latitude",
+									"value": "19.43050000"
+								},
+								{
+									"key": "longitude",
+									"value": "-99.12370000"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "crear conductor",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Miguel\",\r\n    \"apellidos\": \"Diaz\",\r\n    \"doc_identidad\": \"74859623\",\r\n    \"email\": \"migueñ@gmail.com\",\r\n    \"phone\": \"978456213\",\r\n    \"permiso_conducir\": \"A1\",\r\n    \"latitude\": 24.41950000,\r\n    \"longitude\": -80.14780000,\r\n    \"carro_id\": 3\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/conductores",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"conductores"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "crear conductor Copy",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Juan\",\r\n    \"apellidos\": \"Gonzales\",\r\n    \"doc_identidad\": \"89859623\",\r\n    \"email\": \"juan@gmail.com\",\r\n    \"phone\": \"juan@gmail.com\",\r\n    \"permiso_conducir\": \"A1\",\r\n    \"latitude\": 19.41940000,\r\n    \"longitude\": -99.14580000,\r\n    \"tipo_persona\": \"conductor\",\r\n    \"disponible\": false,\r\n    \"carro_id\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/conductores",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"conductores"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update conductor",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Juan\",\r\n    \"apellidos\": \"Gonzales\",\r\n    \"doc_identidad\": \"89859623\",\r\n    \"email\": \"juan@gmail.com\",\r\n    \"phone\": \"978456213\",\r\n    \"permiso_conducir\": \"A1\",\r\n    \"latitude\": 19.4194,\r\n    \"longitude\": -99.1458,\r\n    \"tipo_persona\": \"conductor\",\r\n    \"disponible\": false,\r\n    \"carro_id\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/conductores/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"conductores",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
